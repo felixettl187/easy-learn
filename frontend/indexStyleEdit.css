@@ -57,6 +57,86 @@ header * {
 }
 
 
+/* Dropdown Container oben rechts */
+.dropdown {
+    position: absolute;
+    top: 30px;
+    left: 110px;
+    display: inline-block;
+    font-size: 0.5rem;
+}
+
+/* Schmaler, zierlicher Button */
+.dropdown-toggle {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 0.5rem 10rem; /* Kleineres Padding */
+    border: none;
+    border-radius: 400px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s;
+    min-width: 120px; /* Schmaler! */
+}
+
+/* Hover Effekt auf Button */
+.dropdown-toggle:hover {
+    background-color: #e0e0e0;
+}
+
+/* Dropdown Menü kompakt */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1e272e;
+    border-radius: 6px;
+    margin-top: 2px;
+    list-style: none;
+    padding: 0;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    min-width: 100px; /* Schmaler als vorher */
+    overflow: hidden;
+}
+
+/* Menü aufklappen beim Hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Menü-Items zierlich */
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1px 0.8rem; /* Weniger Padding */
+    background-color: #1e272e;
+    color: #ddd;
+    font-size: 0.85rem;
+    transition: background-color 0.3s;
+}
+
+/* Hover auf Menü-Items */
+.menu-item:hover {
+    background-color: #34495e;
+    cursor: pointer;
+    color: #00a8ff;
+}
+
+/* Icons kleiner */
+.item-icon i {
+    font-size: 1.1rem;
+}
+
+/* Text schön ausrichten */
+.item-txt {
+    text-align: left;
+}
 
 
 
