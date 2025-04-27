@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Easy Learn - PDF Upload</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Easy Learn 📚</h1>
+
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="fileInput" name="files" multiple required>
+        <div id="fileList"></div>
+        <button type="submit">Hochladen</button>
+    </form>
+
+    <div id="uploadResult"></div>
+
+<table id="uploadedFilesTable" style="display:none; margin-top: 20px; border-collapse: collapse; width: 100%;">
+    <thead>
+        <tr>
+            <th>Dateiname</th>
+        </tr>
+    </thead>
+    <tbody id="uploadedFilesBody">
+        <!-- Hier kommen die Dateinamen rein -->
+    </tbody>
+</table>
+
+    <script src="upload.js"></script>
+</body>
+</html>
