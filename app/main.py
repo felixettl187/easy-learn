@@ -1,6 +1,9 @@
+from typing import List
+
 from fastapi import FastAPI, UploadFile, File
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
+import fitz
 
 app = FastAPI()
 
@@ -13,6 +16,17 @@ app.add_middleware(
 )
 
 @app.post("/upload")
-async def upload_file(file: UploadFile = File(...)):
-    content = await file.read()
-    return {"message": "Upload erfolgreich"}
+async def upload_files(files: List[UploadFile] = File(...)):
+    filenames = []
+    for file in files:
+        filenames.append(file.filename)
+        await file.read()
+    return JSONResponse(content={"message": "Upload erfolgreich", "filenames": filenames})
+
+def extract_text_from_pdf(file_bytes: bytes) -> str:
+    text = ""
+    with fitz.open(stream=file_bytes, filetype="pdf") as doc:
+        for page in doc:
+            text += page.extractText()
+        print(text)
+        return text
