@@ -21,7 +21,7 @@ async def upload_files(files: List[UploadFile] = File(...)):
     for file in files:
         filenames.append(file.filename)
         await file.read()
-    return JSONResponse(content={"message": "Upload erfolgreich", "filenames": filenames})
+    return JSONResponse(content={"message": "Upload erfolgreich!", "filenames": filenames})
 
 def extract_text_from_pdf(file_bytes: bytes) -> str:
     text = ""
