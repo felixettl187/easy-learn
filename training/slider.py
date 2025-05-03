@@ -45,13 +45,14 @@ def save_slides_to_csv(slides, pdf_filename, output_folder="uncompleted_data"):
             writer.writerow([i, slide, ""])  # Page-Nummer, Slide-Text, leere Importance-Spalte
 
 def main():
-    pdf_path = "/Users/felixettl/Desktop/HTWG/Semester04SoSe25/IoX/easy-learn/test_pdfs/InternesRechnungswesenSlides.pdf"  # <<< Hier Pfad zur PDF-Datei anpassen
-    with open(pdf_path, "rb") as f:  # PDF-Datei im Byte-Modus öffnen
-        pdf_bytes = f.read()
-
-    slides = extract_slides_from_pdf_bytes(pdf_bytes)  # Slides aus PDF-Bytes extrahieren
-
-    save_slides_to_csv(slides, pdf_path)  # Slides direkt als CSV speichern
+    folder_path = "/Users/felixettl/Desktop/HTWG/Semester04SoSe25/IoX/easy-learn/training/trainingSlides"
+    for filename in os.listdir(folder_path):
+        if filename.endswith(".pdf"):
+            pdf_path = os.path.join(folder_path, filename)
+            with open(pdf_path, "rb") as f:
+                pdf_bytes = f.read()
+            slides = extract_slides_from_pdf_bytes(pdf_bytes)
+            save_slides_to_csv(slides, pdf_path)
 
 if __name__ == "__main__":
     main()

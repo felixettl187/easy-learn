@@ -1,0 +1,20 @@
+Page;Content;Importance
+1;Neuronale Netzwerke bestehen aus Eingabeschicht, verborgenen Schichten und einer Ausgabeschicht. Aktivierungsfunktionen wie ReLU oder Sigmoid steuern die Weitergabe der Signale.;3
+2;- Feedforward-Netzwerk - Backpropagation - Lernrate - Gewichte und Bias Ein Feedforward-Netzwerk verarbeitet Signale sequentiell. Backpropagation minimiert den Fehler durch Gradientenabstieg.;3
+3;Convolutional Neural Networks (CNNs) nutzen Filter, um Bildmerkmale wie Kanten, Formen und Texturen zu erkennen. Sie sind essentiell im Bereich der Bilderkennung.;3
+4;- Layer: Input, Hidden, Output - Gewichtsmatrix W - Bias-Term b - Verlustfunktion (Loss) Mathematische Grundlage: y = f(Wx + b);3
+5;Regularisierungsmethoden wie Dropout und L2 helfen, Overfitting zu vermeiden. Dropout deaktiviert zufällig Neuronen während des Trainings.;3
+6;- Epochs und Batches - Optimizer: Adam, SGD - Loss: MSE, Cross-Entropy Modelle benötigen viele Trainingsdurchläufe für Konvergenz.;3
+7;Aktivierungsfunktionen: - ReLU: max(0, x) - Sigmoid: 1 / (1 + e^-x) - Tanh: (e^x - e^-x) / (e^x + e^-x);3
+8;Hyperparameter-Tuning beeinflusst die Trainingsqualität erheblich. Beispiele: Lernrate, Batchgröße, Anzahl der Schichten.;3
+9;Transfer Learning nutzt vortrainierte Modelle und spart Trainingsressourcen. Beispiel: ResNet auf ImageNet als Basis für neue Klassifikation.;3
+10;"Evaluation 
+erfolgt 
+mit 
+Metriken 
+wie 
+Accuracy, 
+Precision, 
+Recall 
+und 
+F1-Score. Konfusionsmatrix liefert Einsicht in Fehlklassifikationen.";3
