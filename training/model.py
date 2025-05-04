@@ -9,7 +9,8 @@ class ImportanceClassifier(nn.Module):
             nn.Dropout(0.3),
             nn.Linear(128, 64),
             nn.ReLU(),
-            nn.Linear(64, output_dim)
+            nn.Linear(64, output_dim),
+            nn.Sigmoid()
         )
 
     def forward(self, x):

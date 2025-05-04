@@ -1,12 +1,12 @@
 Page;Content;Importance
-1;Ein relationales Datenbankmodell basiert auf Tabellenstrukturen. Jede Zeile entspricht einem Tupel, jede Spalte einem Attribut.;3
-2;- SQL: Structured Query Language - SELECT, INSERT, UPDATE, DELETE - WHERE, JOIN, GROUP BY SQL ermöglicht relationale Abfragen.;3
-3;Normalformen verhindern Redundanz: - 1NF: Atomare Werte - 2NF: Vollständige funktionale Abhängigkeit - 3NF: Keine transitive Abhängigkeit;3
-4;Indexes beschleunigen SELECT-Abfragen. Sie basieren auf Datenstrukturen wie B-Bäumen oder Hash-Tabellen.;3
-5;- Primärschlüssel: eindeutige Identifikation - Fremdschlüssel: referentielle Integrität - Constraints: NOT NULL, UNIQUE;3
-6;NoSQL-Datenbanken wie MongoDB speichern Daten als JSON-Dokumente. Sie sind schemafrei und horizontal skalierbar.;3
-7;- Transaktionen: ACID-Prinzip - Atomarität - Konsistenz - Isolation - Dauerhaftigkeit;3
-8;Views bieten eine abstrahierte Sicht auf Datenbankinhalte. Sie sind virtuelle Tabellen, die durch Abfragen definiert werden.;3
-9;Datenbanknormalisierung verbessert Datenstruktur, jedoch auf Kosten der Abfragekomplexität bei JOINs.;3
-10;- Stored Procedures - Trigger - Funktionen Ermöglichen Automatisierung direkt auf Datenbankebene.;3
-11;Sharding und Replikation sind Skalierungsstrategien für große Datenbanken. Sharding teilt, Replikation dupliziert Daten.;3
+1;Ein relationales Datenbankmodell basiert auf Tabellenstrukturen. Jede Zeile entspricht einem Tupel, jede Spalte einem Attribut.;1
+2;- SQL: Structured Query Language - SELECT, INSERT, UPDATE, DELETE - WHERE, JOIN, GROUP BY SQL ermöglicht relationale Abfragen.;1
+3;Normalformen verhindern Redundanz: - 1NF: Atomare Werte - 2NF: Vollständige funktionale Abhängigkeit - 3NF: Keine transitive Abhängigkeit;1
+4;Indexes beschleunigen SELECT-Abfragen. Sie basieren auf Datenstrukturen wie B-Bäumen oder Hash-Tabellen.;1
+5;- Primärschlüssel: eindeutige Identifikation - Fremdschlüssel: referentielle Integrität - Constraints: NOT NULL, UNIQUE;1
+6;NoSQL-Datenbanken wie MongoDB speichern Daten als JSON-Dokumente. Sie sind schemafrei und horizontal skalierbar.;1
+7;- Transaktionen: ACID-Prinzip - Atomarität - Konsistenz - Isolation - Dauerhaftigkeit;1
+8;Views bieten eine abstrahierte Sicht auf Datenbankinhalte. Sie sind virtuelle Tabellen, die durch Abfragen definiert werden.;1
+9;Datenbanknormalisierung verbessert Datenstruktur, jedoch auf Kosten der Abfragekomplexität bei JOINs.;1
+10;- Stored Procedures - Trigger - Funktionen Ermöglichen Automatisierung direkt auf Datenbankebene.;1
+11;Sharding und Replikation sind Skalierungsstrategien für große Datenbanken. Sharding teilt, Replikation dupliziert Daten.;1

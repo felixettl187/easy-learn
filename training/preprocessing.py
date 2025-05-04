@@ -15,7 +15,7 @@ def load_and_prepare_data(csv_dir, max_features=1000, test_size=0.2):
     data = pd.concat(all_rows, ignore_index=True)
 
     # Importance von 1-5 auf 0-4 mappen
-    data["Importance"] = data["Importance"].astype(int) - 1
+    data["Importance"] = data["Importance"].astype(int)
 
     # TF-IDF-Vektorisierung
     vectorizer = TfidfVectorizer(max_features=max_features)

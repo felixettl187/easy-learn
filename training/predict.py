@@ -30,7 +30,7 @@ def predict_importance(pdf_path):
 
     # 4. Modell laden
     input_dim = vectors.shape[1]
-    output_dim = 5  # Wichtigkeitsskala von 1–5
+    output_dim = 1  # Binäre Klassifikation (0 = unwichtig, 1 = wichtig)
     model = ImportanceClassifier(input_dim, output_dim)
     model.load_state_dict(torch.load("models/importance_model.pth"))
     model.eval()
@@ -38,7 +38,7 @@ def predict_importance(pdf_path):
     # 5. Vorhersage
     with torch.no_grad():
         outputs = model(inputs)
-        _, preds = torch.max(outputs, dim=1)
+        preds = (outputs.squeeze() >= 0.5).int()
 
     # 6. Ausgabe
     for i, prediction in enumerate(preds):
@@ -46,5 +46,5 @@ def predict_importance(pdf_path):
 
 # Beispiel-Ausführung
 if __name__ == "__main__":
-    test_pdf_path = "trainingSlides/test_varianten_slidesv2.pdf"  # Pfad zu deiner Test-PDF
+    test_pdf_path = "trainingSlides/test_varianten_slidesv3.pdf"  # Pfad zu deiner Test-PDF
     predict_importance(test_pdf_path)

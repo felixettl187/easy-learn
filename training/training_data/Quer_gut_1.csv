@@ -1,12 +1,12 @@
 Page;Content;Importance
-1;Ein Betriebssystem verwaltet Ressourcen wie CPU, Speicher, I/O-Geräte und bietet eine Schnittstelle für Anwendungen.;3
-2;- Prozessverwaltung - Threads und Scheduling - Round Robin, Prioritätsbasiert Scheduling-Algorithmen steuern CPU-Zuteilung.;3
-3;Virtueller Speicher ermöglicht, mehr Speicher zu nutzen, als physisch vorhanden ist. Konzepte: Paging, Segmentation.;3
-4;Dateisysteme organisieren Daten auf Speichermedien: - FAT32 - NTFS - ext4 Wichtige Konzepte: Inodes, Blockgröße, Pfadlänge;3
-5;- Synchronisation: Semaphore, Mutex - Race Conditions vermeiden - Deadlocks erkennen und beheben;3
-6;Kernel-Modi: - User Mode vs. Kernel Mode - System Calls ermöglichen privilegierte Operationen aus Anwendungen heraus.;3
-7;Interrupts steuern den Fluss im System durch Ereignisse wie I/O oder Timer. Interrupt-Handler bearbeiten diese Events direkt im Kernel.;3
-8;Multitasking: gleichzeitige Ausführung mehrerer Prozesse. Unterschied zwischen präemptivem und kooperativem Multitasking.;3
-9;- Speicherverwaltung - Paging vs. Swapping - Heap vs. Stack Effiziente Verwaltung reduziert Fragmentierung.;3
-10;Gerätetreiber sind Schnittstellen zwischen Hardware und Betriebssystem. Sie kommunizieren über standardisierte APIs.;3
-11;Betriebssysteme unterscheiden sich: - Monolithisch (Linux) - Mikrokernel (Minix) - Hybrid (Windows NT);3
+1;Ein Betriebssystem verwaltet Ressourcen wie CPU, Speicher, I/O-Geräte und bietet eine Schnittstelle für Anwendungen.;1
+2;- Prozessverwaltung - Threads und Scheduling - Round Robin, Prioritätsbasiert Scheduling-Algorithmen steuern CPU-Zuteilung.;1
+3;Virtueller Speicher ermöglicht, mehr Speicher zu nutzen, als physisch vorhanden ist. Konzepte: Paging, Segmentation.;1
+4;Dateisysteme organisieren Daten auf Speichermedien: - FAT32 - NTFS - ext4 Wichtige Konzepte: Inodes, Blockgröße, Pfadlänge;1
+5;- Synchronisation: Semaphore, Mutex - Race Conditions vermeiden - Deadlocks erkennen und beheben;1
+6;Kernel-Modi: - User Mode vs. Kernel Mode - System Calls ermöglichen privilegierte Operationen aus Anwendungen heraus.;1
+7;Interrupts steuern den Fluss im System durch Ereignisse wie I/O oder Timer. Interrupt-Handler bearbeiten diese Events direkt im Kernel.;1
+8;Multitasking: gleichzeitige Ausführung mehrerer Prozesse. Unterschied zwischen präemptivem und kooperativem Multitasking.;1
+9;- Speicherverwaltung - Paging vs. Swapping - Heap vs. Stack Effiziente Verwaltung reduziert Fragmentierung.;1
+10;Gerätetreiber sind Schnittstellen zwischen Hardware und Betriebssystem. Sie kommunizieren über standardisierte APIs.;1
+11;Betriebssysteme unterscheiden sich: - Monolithisch (Linux) - Mikrokernel (Minix) - Hybrid (Windows NT);1
