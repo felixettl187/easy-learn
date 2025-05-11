@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0e0e0e;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 60px;
+  background-color: transparent;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.logo .dot {
+  color: #f97316;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 80px 60px;
+  min-height: 90vh;
+  background-image: linear-gradient(to right, rgba(14,14,14,0.6), rgba(14,14,14,0.2)), url("pictures/EasyLearnBook.png");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 56px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  font-size: 20px;
+  margin-bottom: 32px;
+  color: #cfcfcf;
+  line-height: 1.6;
+}
+
+button {
+  padding: 14px 28px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.btn {
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: rgb(14, 14, 26);
+  color: rgb(234, 234, 234);
+  font-weight: 700;
+  transition: 0.6s;
+  box-shadow: 0px 0px 60px #1f4c65;
+  -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,0.5));
+}
+
+.btn:active {
+  scale: 0.92;
+}
+
+.btn:hover {
+  background: rgb(2,29,78);
+  background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+  color: rgb(4, 4, 38);
+}
+
+.button-wrapper {
+  background-color: rgba(255, 255, 255, 0.05); /* leichter Kontrast für Spiegelung */
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}

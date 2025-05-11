@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CodingLab</title>
+    <link rel="stylesheet" href="uploadStyleEdit.css"/>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo">Easy Learn</div>
+        <ul class="nav-links">
+            <li><a href="../landingpage/index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Let's get you started!</h1>
+        <p>Upload your pdf's</p>
+
+        <form id="uploadForm">
+    <div class="file-section">
+        <input type="file" id="fileInput" name="file" multiple hidden />
+        <label for="fileInput" class="custom-file-label">Dateien auswählen</label>
+        <div id="fileList"></div>
+    </div>
+
+    <div class="buttons">
+        <a href="#" id="uploadBtn" class="btn btn-outline">Upload</a>
+        <a href="#" id="submitBtn" class="btn btn-filled">Submit</a>
+    </div>
+</form>
+
+        <p id="uploadResult"></p>
+    </div>
+</section>
+
+<script src="upload.js"></script>
+</body>
+</html>
