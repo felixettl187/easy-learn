@@ -11,40 +11,33 @@ def extract_text_from_pdf(pdf_path):
     slides = []
     for page in doc:
         text = page.get_text()
-        if text.strip():  # Nur Seiten mit Inhalt
+        if text.strip():
             slides.append(text.strip())
     return slides
 
 def predict_importance(pdf_path):
-    # 1. Slides aus PDF extrahieren
     slides = extract_text_from_pdf(pdf_path)
 
-    # 2. Vektorizer laden
     with open("models/vectorizer.pkl", "rb") as f:
         vectorizer: TfidfVectorizer = pickle.load(f)
 
-    # 3. Texte vorbereiten und vektorisieren
     processed = [tokenize_and_clean_text(text) for text in slides]
     vectors = vectorizer.transform(processed).toarray()
     inputs = torch.tensor(vectors, dtype=torch.float32)
 
-    # 4. Modell laden
     input_dim = vectors.shape[1]
-    output_dim = 1  # Binäre Klassifikation (0 = unwichtig, 1 = wichtig)
+    output_dim = 1
     model = ImportanceClassifier(input_dim, output_dim)
     model.load_state_dict(torch.load("models/importance_model.pth"))
     model.eval()
 
-    # 5. Vorhersage
     with torch.no_grad():
         outputs = model(inputs)
         preds = (outputs.squeeze() >= 0.5).int()
 
-    # 6. Ausgabe
     for i, prediction in enumerate(preds):
         print(f"Seite {i+1}: Wichtigkeit {prediction.item()}")
 
-# Beispiel-Ausführung
 if __name__ == "__main__":
-    test_pdf_path = "trainingSlides/test_varianten_slidesv3.pdf"  # Pfad zu deiner Test-PDF
+    test_pdf_path = "trainingSlides/test_varianten_slidesv3.pdf"
     predict_importance(test_pdf_path)

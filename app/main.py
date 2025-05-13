@@ -27,7 +27,6 @@ async def upload_file(file: UploadFile = File(...)):
     return JSONResponse(content={"message": "Upload erfolgreich!", "filename": file.filename, "predictions": predictions})
 
 
-# Neue Implementierung von process_pdf_for_prediction (ersetzt alte Klassen/Codeblöcke)
 import os
 import fitz
 import joblib
@@ -37,7 +36,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 
 def process_pdf_for_prediction(file_bytes: bytes):
-    # Lade das Modell und den Vektorisierer
     model_path = os.path.join("models", "importance_model.pth")
     vectorizer_path = os.path.join("models", "vectorizer.pkl")
     if not os.path.exists(model_path) or not os.path.exists(vectorizer_path):
@@ -52,14 +50,11 @@ def process_pdf_for_prediction(file_bytes: bytes):
     model.load_state_dict(torch.load(model_path, map_location=torch.device("cpu")))
     model.eval()
 
-    # Lade PDF und extrahiere Seiteninhalte
     with fitz.open(stream=file_bytes, filetype="pdf") as doc:
         texts = [page.get_text().strip() for page in doc]
 
-    # Vektorisieren
     vectors = vectorizer.transform(texts)
 
-    # Vorhersagen berechnen
     with torch.no_grad():
         inputs = torch.tensor(vectors.toarray(), dtype=torch.float32)
         outputs = model(inputs)
